@@ -1,0 +1,16 @@
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px;
+}
+
+.colorHomme{
+    color: #6c6cfb;
+}
+
+.colorFemme{
+    color: #b16e79;
+}

@@ -1,0 +1,81 @@
+<?php
+
+require_once 'assets/php/indexHandler.php';
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma card</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+</head>
+<body>
+
+    <?php
+
+    include_once 'header.html';
+
+    ?>
+
+    <main>
+
+    <?php
+    
+    $user = recupValue();
+
+    $classCouleur = changeColorStatusGenre($_SESSION['user']['sexe']);
+    
+    ?>
+
+    <article class="<?php 
+    
+    echo($classCouleur['couleurChange']);
+    
+    ?>">
+        <div>
+            <span>Nom :</span>
+            <span>
+                <?php 
+                
+                echo($_SESSION['user']['nom']);
+                
+                ?>
+            </span>
+        </div>
+        <div>
+            <span>Prénom :</span>
+            <span>
+                <?php
+                
+                echo($_SESSION['user']['prenom']);
+                
+                ?>
+            </span>
+        </div>
+        <div>
+            <span>Genre :</span>
+            <span>
+                <?php
+                
+                if($_SESSION['user']['sexe'] == 0){
+                    echo 'Homme';
+                }else{
+                    echo 'Femme';
+                }
+                
+                ?>
+            </span>
+        </div>
+    </article>
+        
+    </main>
+
+</body>
+</html>

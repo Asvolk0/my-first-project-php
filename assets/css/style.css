@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 43px);
+    background: #424242;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    border-width: 1px;
+}
+
+.inputCheckbox{
+    color: #fff;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.inputCheckbox input{
+    margin-top: 10px;
+}
+
+input:nth-child(6){
+    cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<?php
+
+require_once 'assets/php/indexHandler.php';
+
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faire du php | creer un compte</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <?php
+
+    include_once 'header.html';
+
+    ?>
+
+    <main>
+
+        <form method="post">
+            <input type="text" placeholder="Nom" name="nom" required>
+            <input type="text" placeholder="Prenom" name="prenom" required>
+            <div>
+                <input type="email" placeholder="Email" name="email" required>
+                <span> <?php echo getMsgErrorForm($formErrors, 'errMsgFirstname'); ?> </span>
+            </div>
+            <input type="password" placeholder="Mot de passe" name="motDePasse" required>
+            <div class="inputCheckbox">
+                <span>Homme ou Femme ?</span>
+                <input type="checkbox" placeholder="Sexe" name="sexe">
+            </div>
+            <input type="submit" name="submit">
+        </form>
+
+    </main>
+    
+</body>
+</html>

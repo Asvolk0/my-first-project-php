@@ -1,0 +1,52 @@
+<?php 
+
+require_once 'assets/php/seConnecterHandler.php';
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modification.css">
+</head>
+<body>
+    <?php
+
+    include_once 'header.html';
+
+    ?>
+
+    <main>
+        <form method="post">
+            <span>
+                Changer de mot de passe ?
+            </span>
+            <input type="password" placeholder="Mot de passe" name="motDePasse" required>
+            <!-- <input type="password" placeholder="Vérification du mot de passe" name="motDePasseVerification"> -->
+            <input type="submit" name="submitMotDePasse">
+        </form>
+        <form method="post">
+            <span>
+                Changer de nom et prenom ?
+            </span>
+            <input type="text" placeholder="Nom" name="nom" value="<?php echo $_SESSION['user']['nom']; ?>" required>
+            <input type="text" placeholder="Prenom" name="prenom" value="<?php echo $_SESSION['user']['prenom']; ?>" required>
+            <input type="submit" name="submitNom">
+        </form>
+        <form method="post">
+            <span>
+                Changer de sexe ?
+            </span>
+            <input type="checkbox" placeholder="Sexe" name="sexe" value="<?php echo $_SESSION['user']['sexe']; ?>">
+            <input type="submit" name="submitSexe">
+        </form>
+    </main>
+    
+</body>
+</html>
